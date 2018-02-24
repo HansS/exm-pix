@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="password" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input type="email" [(ngModel)]="email" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <button ion-button block (click)="login()">Login</button>
+  </ion-item>
+  <div *ngIf="loggedIn">
+    You are logged in as {{ user | json }}
+  </div>
+  <div *ngIf="!loggedIn">
+    Anonymous User!
+  </div>
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Take a Photo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <button ion-button block (click)="takePhoto()">Take a Photo</button>
+    <button ion-button block (click)="uploadPhoto()">Upload Photo</button>
+  </ion-item>
+  <ion-item>
+    <img src="{{ imageString64 }}" alt="">
+  </ion-item>
+</ion-content>
